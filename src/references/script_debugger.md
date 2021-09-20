@@ -70,6 +70,7 @@ When script execution is paused, the **Script Debugger** can step through the sc
 ### Step Out
 
 **Step Out** ![Step Out](../img/ScriptDebugger/step_out_icon.png)is used to step out of a function. The **Script Debugger** will execute the current function, and pauses at the first line outside of that function.
+{: .image-inline-text .image-background }
 
 For example, when part of a function needs to be debugged, stepping out will tell the **Script Debugger** to run the rest of that function.
 {: .image-inline-text .image-background }
@@ -88,7 +89,7 @@ The **Script Task** drop down will list all the scripts, and also indicate which
 
 The **Stack Frames** panel in the **Script Debugger** window, shows the function calls that are currently on the stack for the current running script task. The **Stack Frames** panel shows the order in which the functions are getting called, which is a good way to see the execution flow of the script for the current task.
 
-In the picture below, you can see the execution flow for the current running script.
+In the picture below, the execution flow for the current running script can be seen.
 
 ![!Stack Frames](../img/ScriptDebugger/stack_frames.png){: .center loading="lazy" }
 
