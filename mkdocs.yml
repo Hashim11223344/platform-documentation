@@ -60,6 +60,7 @@ nav:
               - Hello World: tutorials/lua_basics_helloworld.md
               - Lightbulb: tutorials/lua_basics_lightbulb.md
               - Race Timer: tutorials/race_timer.md
+              - Boss Fight: tutorials/boss_tutorial.md
           - Visual Effects in Core: tutorials/vfx_tutorial.md
           - Weapons: tutorials/weapons_tutorial.md
           - Weapons & Abilities: tutorials/abilities_advanced.md
@@ -84,6 +85,7 @@ nav:
               - Dungeon Framework Reference: references/dungeon_framework.md
           - Game Components: api/components.md
           - IK and Custom Animations: references/ik_anchors.md
+          - Interaction System: references/interaction_system.md
           - Interconnected Games: references/interconnected_games.md
           - Leaderboards: references/leaderboards.md
           - Merged Models: references/merged_models.md
