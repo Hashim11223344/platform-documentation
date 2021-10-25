@@ -62,6 +62,7 @@ nav:
               - Race Timer: tutorials/race_timer.md
               - Boss Fight: tutorials/boss_tutorial.md
               - Cosmetic System: tutorials/cosmetic_tutorial.md
+              - Game Events: tutorials/game_events.md
           - Visual Effects in Core: tutorials/vfx_tutorial.md
           - Weapons: tutorials/weapons_tutorial.md
           - Weapons & Abilities: tutorials/abilities_advanced.md
@@ -85,6 +86,7 @@ nav:
           - Frameworks:
               - Dungeon Framework Reference: references/dungeon_framework.md
           - Game Components: api/components.md
+          - Game Events: references/game_events.md
           - Gatherables: references/gatherables.md
           - IK and Custom Animations: references/ik_anchors.md
           - Interaction System: references/interaction_system.md
@@ -143,6 +145,8 @@ nav:
           - CoreFriendCollection: api/corefriendcollection.md
           - CoreFriendCollectionEntry: api/corefriendcollectionentry.md
           - CoreGameCollectionEntry: api/coregamecollectionentry.md
+          - CoreGameEvent: api/coregameevent.md
+          - CoreGameEventCollection: api/coregameeventcollection.md
           - CoreGameInfo: api/coregameinfo.md
           - CoreMesh: api/coremesh.md
           - CoreObject: api/coreobject.md
@@ -198,6 +202,7 @@ nav:
           - UIButton: api/uibutton.md
           - UIContainer: api/uicontainer.md
           - UIControl: api/uicontrol.md
+          - UIEventRSVPButton: api/uieventrsvpbutton.md
           - UIImage: api/uiimage.md
           - UIPanel: api/uipanel.md
           - UIPerkPurchaseButton: api/uiperkpurchasebutton.md

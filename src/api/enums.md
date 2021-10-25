@@ -75,6 +75,14 @@ tags:
 | `Collision.FORCE_ON` | `1` | Object collision is enabled, regardless of parent state. |
 | `Collision.FORCE_OFF` | `2` | Object collision is disabled, regardless of parent state. |
 
+## CoreGameEventState
+
+| Enum Name | Value | Description |
+| --------- | ----------- | ----------- |
+| `CoreGameEventState.ACTIVE` | `1` | The event is currently active. |
+| `CoreGameEventState.SCHEDULED` | `0` | The event is scheduled to begin in the future. |
+| `CoreGameEventState.CANCELED` | `2` | The event has been canceled and will not run. |
+
 ## CoreModalType
 
 | Enum Name | Value | Description |
@@ -193,6 +201,15 @@ tags:
 | `NetReferenceType.SHARED_STORAGE` | `2` | Player shared storage key. |
 | `NetReferenceType.CREATOR_PERK` | `3` | Creator perk. |
 | `NetReferenceType.UNKNOWN` | `0` | Unknown `NetReference`. |
+
+## NetworkContextType
+
+| Enum Name | Value | Description |
+| --------- | ----------- | ----------- |
+| `NetworkContextType.NETWORKED` | `2` | Spawned on the server and replicated to clients. |
+| `NetworkContextType.CLIENT_CONTEXT` | `3` | Spawned on the client only. |
+| `NetworkContextType.SERVER_CONTEXT` | `4` | Spawned on the server only. |
+| `NetworkContextType.STATIC_CONTEXT` | `5` | Spawned independently on client or server and not replicated. |
 
 ## Orientation
 
