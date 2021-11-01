@@ -8,6 +8,8 @@ tags:
 
 # Game Events
 
+![!Events](../img/GameEvents/header.png){: .center loading="lazy" }
+
 ## Overview
 
 **Game Events** are designed to help increase engagement and retention in your games. Users will be able to browse events for all games or view events created for specific games on the game details page.
@@ -15,8 +17,6 @@ tags:
 **Game Events** are available to everyone, however, Creators in the Perks Program will have the ability to create more events, and with a longer length.
 
 **Game Events** are different to the [Events API](/api/events.md). The Events API is used for Broadcasting from Lua scripts.
-
-<!-- TODO: Add image of events in the client when it's live. -->
 
 ## Accessing the Events Page
 
@@ -114,7 +114,7 @@ Players can also unregister from events at anytime, this will remove the event f
 
 In the editor, there is a button component called **UI Event RSVP Button** that can be found in **Platform Tools**, in **Core Content**. This button can be used by players in game so they can register and unregister for an event. This button will also contain a countdown for when the event will begin.
 
-Each game event created will have a **Game Event Id** that can be copied and added to the **Event ID** property of the **UI Event RSVP Button** in the **Properties Panel**. If no ID is entered, or is invalid, then the button will be disabled.
+Each game event created will have a **Game Event Id** that can be copied and added to the **Event ID** property of the **UI Event RSVP Button** in the **Properties** window. If no ID is entered, or is invalid, then the button will be disabled.
 
 ![!Register For Event](../img/GameEvents/event_button.png){: .center loading="lazy" }
 
