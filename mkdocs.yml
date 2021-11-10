@@ -28,6 +28,7 @@ nav:
               - Create an RPG Game: tutorials/first_game_rpg.md
               - Create a Survival Game: tutorials/survival_tutorial.md
               - Create a CTF Game: tutorials/first_game_ctf.md
+              - Create a Battle Royale Game: tutorials/first_game_br.md
           - Publish a Game: getting_started/publishing.md
           - Getting Help in Core: getting_started/core_help.md
           - Core for Game Jams: references/global_game_jam.md
@@ -84,6 +85,7 @@ nav:
           - Curves: references/curves.md
           - Custom Properties: references/custom_properties.md
           - Damageable Objects: references/damageable_objects.md
+          - Debris Physics: references/debris_physics.md
           - Editor Shortcuts: references/editor_keybindings.md
           - Events and Hooks: references/events_hooks.md
           - Frameworks:
@@ -104,6 +106,7 @@ nav:
           - Party System: references/party_system.md
           - Performance Window: references/performance_panel.md
           - Persistent Storage: references/persistent_storage.md
+          - Physics Objects: references/physics_objects.md
           - Play-Mode Profiler: references/profiler.md
           - Portals: references/portals.md
           - Project Files: getting_started/project_files.md
