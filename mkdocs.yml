@@ -53,7 +53,9 @@ nav:
       - Tutorials:
           - Abilities: tutorials/ability_tutorial.md
           - AI Activities: tutorials/ai_activity_tutorial.md
+          - ✨ Chat Commands: tutorials/chat_commands_tutorial.md
           - Chat Hooks: tutorials/chat_tutorial.md
+          - ✨ Concurrent Storage: tutorials/concurrent_storage_tutorial.md
           - Cosmetic System: tutorials/cosmetic_tutorial.md
           - Destructible Objects: tutorials/boss_tutorial.md
           - Environment Art: tutorials/environment_art.md
@@ -80,6 +82,7 @@ nav:
           - Audio: references/audio.md
           - Binding Sets: references/binding_sets.md
           - Cameras and Settings: references/cameras_and_settings.md
+          - ✨ Concurrent Storage: references/concurrent_storage.md
           - Community Content: getting_started/community_content.md
           - Contexts: api/contexts.md
           - Curves: references/curves.md
@@ -262,6 +265,7 @@ theme:
     text: Roboto
     code: JetBrains Mono
   features:
+    - content.code.annotate
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant
@@ -297,10 +301,10 @@ extra_javascript:
 extra:
   alternate:
     - name: English
-      link: /
+      link: ./
       lang: en
     - name: Français (Beta)
-      link: /fr/
+      link: ./fr/
       lang: fr
   analytics:
     provider: google
