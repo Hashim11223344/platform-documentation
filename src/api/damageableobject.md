@@ -305,3 +305,124 @@ MESH_OBJECT.team = math.random(1, 2)
 See also: [Object.IsValid](object.md) | [CoreObject.parent](coreobject.md) | [Game.IncreaseTeamScore](game.md) | [Damage.sourcePlayer](damage.md) | [Player.team](player.md)
 
 ---
+
+Example using:
+
+### `ApplyDamage`
+
+In this example, damage can be applied to all objects in an area, by calling `Explosion()`, passing the epicenter of the explosion. First, all damageable objects that are inside the area are found with `GetDamageablesInArea()`. Then, a damage object is created and applied to each one.
+
+```lua
+local RADIUS = 500
+local DAMAGE_AMOUNT = 50
+
+function Explosion(center)
+    local objects = GetDamageablesInArea(center, RADIUS)
+    for _,obj in ipairs(objects) do
+        local damage = Damage.New(DAMAGE_AMOUNT)
+        obj:ApplyDamage(damage)
+    end
+end
+
+function GetDamageablesInArea(center, radius)
+    --CPU optimization, to avoid square root later
+    local radiusSquared = radius * radius
+    
+    local result = {}
+    local allDamageables = World.FindObjectsByType("DamageableObject")
+    for _,obj in ipairs(allDamageables) do
+        local position = obj:GetWorldPosition()
+        local v = position - center
+        if v.sizeSquared <= RADIUS_SQUARED then
+            table.insert(result, obj)
+        end
+    end
+    return result
+end
+```
+
+See also: [Damage.New](damage.md) | [Vector3.sizeSquared](vector3.md) | [World.FindObjectsByType](world.md) | [CoreObject.GetWorldPosition](coreobject.md)
+
+---
+
+Example using:
+
+### `Die`
+
+In this example, the function `ApplyPoison()` can be called, passing any damageable object as parameter. Each object keeps track of how much poison they have, using the `serverUserData` table. When an object receives 10 or more poison they are killed.
+
+```lua
+function ApplyPoison(damageableObject)
+    if damageableObject.serverUserData.poisonCount then
+        damageableObject.serverUserData.poisonCount = damageableObject.serverUserData.poisonCount + 1
+        
+        if damageableObject.serverUserData.poisonCount >= 10 then
+            damageableObject:Die()
+        end
+    else
+        damageableObject.serverUserData.poisonCount = 1
+    end
+end
+```
+
+See also: [CoreObject.serverUserData](coreobject.md)
+
+---
+
+Example using:
+
+### `isDead`
+
+This example shows how to search the game for all damageables and then filter them by some criteria. In this case, we create a function that returns all dead objects by checking the `isDead` property.
+
+```lua
+function GetAllDeadObjects()
+    local result = {}
+    local allDamageables = World.FindObjectsByType("Damageable")
+    for _,obj in ipairs(allDamageables) do
+        if obj.isDead then
+            table.insert(result, obj)
+        end
+    end
+    return result
+end
+```
+
+See also: [World.FindObjectsByType](world.md)
+
+---
+
+Example using:
+
+### `isImmortal`
+
+In this example, whenever a `Damageable` object overlaps a trigger it temporarily gains immortality. We keep track of the `immortalCount` in the case where the object would gain immortality a second time before the wait period completes from the first overlap. This could happen if the object went back and forth and hit the trigger multiple times, or if there are multiple triggers near each other with this same script.
+
+```lua
+local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+local IMMORTAL_DURATION = 2.5
+
+function OnTriggerOverlap(_, other)
+    if other:IsA("Damageable") then
+        other.isImmortal = true
+
+        if not other.serverUserData.immortalCount then
+            other.serverUserData.immortalCount = 0
+        end
+        other.serverUserData.immortalCount = other.serverUserData.immortalCount + 1
+        
+        Task.Wait(IMMORTAL_DURATION)
+        
+        other.serverUserData.immortalCount = other.serverUserData.immortalCount - 1
+        if other.serverUserData.immortalCount <= 0 then
+            other.isImmortal = false
+        end
+    end
+end
+
+TRIGGER.beginOverlapEvent:Connect(OnTriggerOverlap)
+```
+
+See also: [CoreObject.serverUserData](coreobject.md) | [CoreObjectReference.WaitForObject](coreobjectreference.md) | [Task.Wait](task.md)
+
+---

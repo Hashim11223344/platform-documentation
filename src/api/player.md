@@ -712,10 +712,6 @@ Example using:
 
 ### `GetLeaveTransferData`
 
-### `gameId`
-
-### `reason`
-
 In this example, transfer data is printed to the server log each time a player joins or leaves the game. While this works in preview mode, there will never be a `gameId` in that case, and the `reason` for the transfer will always be `BROWSE`. Therefore, this example works best when the game is published.
 
 To see the server logs of a published game, select the Game Settings object in the hierarchy and enable "Play Mode Profiling". When playing the published game press F4 to see the profiler and access the logs. You may need a second player joining/leaving to observe the logs while testing the various different reasons.
@@ -798,7 +794,7 @@ Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 ```
 
-See also: [PlayerTransferReason](enums.md#playertransferreason) | [Player.TransferToGame](player.md) | [Game.TransferAllPlayersToGame](game.md) | [CoreGameInfo.name](coregameinfo.md)
+See also: [PlayerTransferData.gameId](playertransferdata.md) | [PlayerTransferReason](enums.md#playertransferreason) | [Player.TransferToGame](player.md) | [Game.TransferAllPlayersToGame](game.md) | [CoreGameInfo.name](coregameinfo.md)
 
 ---
 
@@ -1331,6 +1327,28 @@ See also: [Game.GetPlayers](game.md) | [CoreLua.print](coreluafunctions.md) | [T
 
 Example using:
 
+### `isCollidable`
+
+In this example, a trigger makes the player fall through the ground when they step on it. After a short wait period, the player's collision is resumed, so they may interact with whatever else is below the ground.
+
+```lua
+local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+
+TRIGGER.beginOverlapEvent:Connect(function(_,player)
+    if player:IsA("Player") then
+        player.isCollidable = false
+        Task.Wait(1.5)
+        player.isCollidable = true
+    end
+end)
+```
+
+See also: [Trigger.beginOverlapEvent](trigger.md) | [CoreObject.GetCustomProperty](coreobject.md) | [Task.Wait](task.md)
+
+---
+
+Example using:
+
 ### `isInParty`
 
 ### `isPartyLeader`
@@ -1362,6 +1380,50 @@ Game.playerJoinedEvent:Connect(OnPlayerJoined)
 ```
 
 See also: [Game.playerJoinedEvent](game.md) | [Player:IsInPartyWith](player.md)
+
+---
+
+Example using:
+
+### `isMovementEnabled`
+
+### `animationStance`
+
+### `serverUserData`
+
+There are different approaches to stunning a player. In this example we disable player movement with `isMovementEnabled`. We keep count of the number of active stuns, in case more than one stun overlap in duration we don't want the player to exit the stun when the duration of the first one completes.
+
+```lua
+local STUN_DURATION = 1.5
+    
+function ApplyStunToPlayer(player)
+    player.isMovementEnabled = false
+    player.animationStance = "unarmed_stun_dizzy"
+    
+    -- Initialize stun count if needed
+    if not player.serverUserData.stunCount then
+        player.serverUserData.stunCount = 0
+    end
+    -- Keep track of how many times stun has been called, in case multiple stuns overlap in time
+    player.serverUserData.stunCount = player.serverUserData.stunCount + 1
+    
+    -- Duration of the stun effect
+    Task.Wait(STUN_DURATION)
+    
+    -- Stun effect has passed. Decrease the counter
+    player.serverUserData.stunCount = player.serverUserData.stunCount - 1
+    
+    -- If there are no more stuns active, cleanup
+    if player.serverUserData.stunCount <= 0 then
+        player.isMovementEnabled = true
+        
+        -- Put the animation back to normal
+        player.animationStance = "unarmed_stance"
+    end
+end
+```
+
+See also: [Task.Wait](task.md)
 
 ---
 
