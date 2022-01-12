@@ -163,7 +163,7 @@ Example using:
 
 ### `TransferAllPlayersToGame`
 
-In this example, players can type the command `/reboot` into chat to send all players to a fresh server instance. It's the same game, just another copy of the server. Before transfering the players, we lock the server with `StopAcceptingPlayers()`, otherwise some players might reload into the same server instance.
+In this example, players can type the command `/reboot` into chat to send all players to a fresh server instance. It's the same game, just another copy of the server. Before transferring the players, we lock the server with `StopAcceptingPlayers()`, otherwise some players might reload into the same server instance.
 
 ```lua
 local GAME_ID = Game.GetCurrentGameId()
@@ -405,16 +405,16 @@ Example using:
 
 ### `FindPlayer`
 
-In this example, a trigger is setup as a teleporter that sends players to a random game. If the player entering the trigger is the leader of a party, then the entire party is transfered to the same game.
+In this example, a trigger is setup as a teleporter that sends players to a random game. If the player entering the trigger is the leader of a party, then the entire party is transferred to the same game.
 
 ```lua
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
-    
+
 function OnBeginOverlap(_, player)
     if not player:IsA("Player") then return end
-    
+
     local destinationGame = GetRandomFeaturedGame()
-    
+
     if player.isInParty and player.isPartyLeader then
         -- Transfer the whole party
         local partyOfPlayers = {}
