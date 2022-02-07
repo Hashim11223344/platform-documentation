@@ -12,11 +12,11 @@ tags:
 
 Core is an ecosystem of games with creator tools designed to allow players to jump quickly through many different games. Each game's success helps other games, so the Core community is very collaborative and helpful to new creators, and there are resources within the Core Editor to make collaboration on projects easy.
 
-This document will discuss ways to structure projects to work with a team as collaborators, and detail the tools, in and out of Core, that will let you succeed in creating successful projects with a team.
+This document will discuss ways to structure projects to work with a team as collaborators and detail the tools used in and out of Core, that will let you succeed in creating successful projects with a team.
 
 ### You Can Do It All
 
-Teams are a part of traditional game development, but Core also makes it possible for an individual to do every part of a project, from the art to programming to post-publication promotion! Whether you build as an individual or a team is entirely up to you!
+Teams are a part of traditional game development, but Core also makes it possible for an individual to do every part of a project, from the art to programming to post-publication promotion. Whether you build as an individual or a team is entirely up to you.
 
 ### Core Project Files are Saved Locally
 
@@ -56,7 +56,7 @@ These maps can be used as the basis of a new project, or for exporting specific 
 
 ### Getting Support from the Community
 
-The Core Community is, in general, collaborative and frequently producing utilities for others to use in their games. The [Core Hub Discord Server](https://discord.com/invite/core-creators) is the best place to find collaborators, get help on work, and find playtesters for a game project.
+The Core Community is, in general, collaborative, and frequently producing utilities for others to use in their games. The [Core Hub Discord Server](https://discord.com/invite/core-creators) is the best place to find collaborators, get help on work, and find playtesters for a game project.
 
 The Core Hub **#bountyboard** channel, in particular, is a place where creators can make requests for assets and utilities that would help them make their games, and other creators are free to help each with these challenges.
 
@@ -115,7 +115,7 @@ Templates are a way to package things you have created in Core. They can be used
 **Git** is a system for managing software projects with multiple contributors, and [GitHub](https://github.com/) is just one of many available systems. To learn more about setting up a project on GitHub, see the [GitHub tutorial](../tutorials/github.md).
 
 !!! tip
-    Did you know that all of Core Documentation is hosted on GitHub for editing by the Core Creator Community? Click the pencil icon in the top right corner of any page to help improve documentation!
+    Did you know that all of Core Documentation is hosted on GitHub for editing by the Core Creator Community? Click the pencil icon in the top right corner of any page to help improve documentation.
 
 #### Branches
 
@@ -123,11 +123,11 @@ There are many different ways to structure a project's Git branches, but this st
 
 - **publish**: This branch gets updated when you publish the game, and not updated again until you republish. This way you can always change your project back to match the published version or compare to it to see everything that will change with the next one.
 - **main**: This is your main branch. It is the most recent but fully stable version of your game. This is the version you will publish next.
-- **feature-name branches**: Every time you or your team mates want to start working on a new feature, make a new branch for each of them, so that you can feel free to experiment with new ideas that might break your project, but without actually breaking it!
+- **feature-name branches**: Every time you or your team mates want to start working on a new feature, make a new branch for each of them, so that you can feel free to experiment with new ideas that might break your project, but without actually breaking it.
 
 #### Folders
 
-The **Tree.pbt** file in your project is a master file that keeps track of all the assets in the project, and the the transforms and properties of all the objects that are in the scene. If two creators move the same object to different locations, git will no longer be able to determine which position an object should be in.
+The **Tree.pbt** file in your project is a master file that keeps track of all the assets in the project, and the transforms and properties of all the objects that are in the scene. If two creators move the same object to different locations, git will no longer be able to determine which position an object should be in.
 
 To avoid this problem, the best practice is to create **Folders** in Core that separate the assets. You can use the **Lock** icon when working on a project to ensure no changes to any of the objects in folders that you are not working on.
 

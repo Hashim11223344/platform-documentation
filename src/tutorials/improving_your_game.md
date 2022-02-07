@@ -16,7 +16,7 @@ This document should be a useful tool, not a set of unbreakable rules.
 
 ### About DAU and Retention
 
-There are many ways to measure the success of games, and the most easily accessible one is the number of **Daily Active Users**, or the number of individuals who connect to your game in a single day. You can easily find out the DAU of your game from your [**Creator Dashboard**](https://www.coregames.com/create/dashboard).
+There are many ways to measure the success of games, and the most easily accessible one is the number of **Daily Active Users (DAU)**, or the number of individuals who connect to your game in a single day. You can easily find out the DAU of your game from your [**Creator Dashboard**](https://www.coregames.com/create/dashboard).
 
 **Retention** measures how many players come back to your game after the first time you try it. The [**Creator Analytics**](creator_analytics.md) page allows creators to download data about how many players return in the month after they try your game for the first time.
 
@@ -27,7 +27,7 @@ There are many ways to measure the success of games, and the most easily accessi
 
 The **Elevator Pitch** is a test of whether you can explain your game in 1-2 sentences. If you can quickly communicate what your game is about, and what it feels like to play it, it will make your design easier for players to understand.
 
-Having a clear and concise summary of your game also helps others spread the word about your game!
+Having a clear and concise summary of your game also helps others spread the word about your game.
 
 ## Iteration
 
@@ -99,7 +99,7 @@ Some questions you might consider about Celebrating Wins and Showing Losses:
 
 Depth can be one of the most challenging parts of game design, and focuses on what the gameplay experience will be like for a player who plays for a long time.
 
-Some depth can take the form of a well-developed game world, with background stories that are conveyed throughout, with dialogues or environment clues. However, the aspect that keeps players likely to return is the ability to set **goals** in your game.
+Some depth can take the form of a well-developed game world, with background stories that are conveyed throughout, with dialogs or environment clues. However, the aspect that keeps players likely to return is the ability to set **goals** in your game.
 
 Possible goals are important information to communicate, and many games succeed by having different types of goals that attract different types of players.
 

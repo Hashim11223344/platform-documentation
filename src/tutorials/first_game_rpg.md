@@ -189,7 +189,7 @@ You can use the many fantasy props to build out a shop, but there are even more 
 
 ### Example: The Blacksmith
 
-A blacksmith would be one way you could create a more immersive shop that fits in the world. Check out these community content items to build it!
+A blacksmith would be one way you could create a more immersive shop that fits in the world. Check out these community content items to build it.
 
 #### Trellis by mjcortes782
 
@@ -237,14 +237,14 @@ For the final step, remove all of the objects that are not part of the final gam
 
 ### Preview in Multiplayer
 
-Now that you have finished the steps to make the game, it is time to do more more test before publishing.
+Now that you have finished the steps to make the game, it is time to do more test before publishing.
 
 1. Click ![Multiplayer Preview Mode](../img/EditorManual/icons/Icon_MultiplayerTest.png) to switch the Preview Mode to Multiplayer.
 {: .image-inline-text .image-background }
 2. Press ![Play](../img/EditorManual/icons/Icon_Play.png) to start the preview. This will open a separate game window for each player.
 {: .image-inline-text .image-background }
 
-Try out your dungeons, testing enemy AI behavior, the shop items, and making sure you can't get trapped anywhere. Once you are happy with the game, you are ready to [publish](publishing.md)!
+Try out your dungeons, testing enemy AI behavior, the shop items, and making sure you can't get trapped anywhere. Once you are happy with the game, you are ready to [publish](publishing.md).
 
 ## Learn More
 

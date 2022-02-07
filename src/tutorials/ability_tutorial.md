@@ -12,12 +12,9 @@ tags:
 
 An ability is anything that the player can do themselves.
 
-Anytime that a player can do something more than just jump and crouch, that should be added to a Core project as an ability. Abilities are how a creator can add functions that a player can activate, and these abilities can be anything.
+Anytime that a player can do something more than just jump and crouch, it can be an ability added to the project. Abilities are how a creator can add functions that a player can activate, and these abilities can be anything.
 
 An ability could be to sprint, a cheering emote, the opening of a hidden menu; an ability can be anything that ought to happen on a button press or at a certain moment, repeatedly.
-
-!!! info
-    Comparing with Unreal and other game engines, an ability is basically a fancier keyboard input. "Fancier" because it has events built-in that can be set at each phase of execution.
 
 * **Completion Time:** 10 minutes
 * **Knowledge Level:** No prior knowledge required
@@ -35,17 +32,17 @@ An ability could be to sprint, a cheering emote, the opening of a hidden menu; a
 
 ### What is an Ability
 
-In Core, an `Ability` is an object that holds information about how to behave when used. You can set how long the ability lasts for, how long until the ability can be used a second time, and all sorts of other properties.
+In Core, an `Ability` is an object that holds information about how to behave when used. You can set how long the ability lasts for, the cooldown of the ability until the player can use it again, and all sorts of other properties.
 
 While there are ways to utilize all these properties, for your first dive into abilities, we're just going to touch on the very basics.
 
-Abilities can either be assigned to players at the start of a game, or when they equip a special item.
+Players can equip abilities at the start of a game, or when they equip a special item.
 
 ---
 
 ## Tutorial
 
-Adding a simple ability to a game is only a couple of steps. We'll go over how to activate an animation on a button press, with no coding necessary!
+Adding a simple ability to a game is only a couple of steps. We'll go over how to activate an animation on a button press, with no coding necessary.
 
 We're going to make a piece of equipment that the player can pick up, and when they do, they will gain a new ability.
 
@@ -66,7 +63,7 @@ For this tutorial, we are going to make the player wave hello.
 
     ![A trigger at 0,0,0](../img/EditorManual/Abilities/trigger000.png "This trigger is halfway into the ground."){: .center loading="lazy" }
 
-    This box you are seeing is the `PickupTrigger`, which is what allows you to pick up the equipment! When a player walks into this, they will immediately "equip" the equipment.
+    This box you are seeing is the `PickupTrigger`, which is what allows you to pick up the equipment. When a player walks into this, they will immediately "equip" the equipment.
 
 2. With the `Equipment` object selected in the **Hierarchy**, check out the **Properties** window. Scroll down to the section titled "Equipment".
 
@@ -74,11 +71,11 @@ For this tutorial, we are going to make the player wave hello.
 
     The **Socket** property determines _where_ the equipment will be attached to the player--we want the equipment to disappear, so for simplicity we will attach it somewhere that it will be hidden by the player's body.
 
-    Doing these first two steps will already let you pick up the `Equipment` when playing the game and walking through it--but it is hard to pick up something you can't see!
+    Doing these first two steps will already let you pick up the `Equipment` when playing the game and walking through it--but it is hard to pick up something you can't see.
 
 3. To make this a more usable power-up object, let's add a model to it that players can see.
 
-    You can choose whatever you would like and would fit your game, but in my case I am going to use a classic gem.
+    You can choose whatever you would like and would fit your game, but in this case the class gem is used.
 
     1. In the **Core Content** tab, search for "diamond" and drag the `Gem - Diamond 6-Sided Polished` into your Project Hierarchy.
 
@@ -86,7 +83,7 @@ For this tutorial, we are going to make the player wave hello.
 
         Feel free to change the material, or make the model suit your own game more. To learn more about how to make cool art & models in Core, read our **[Art Reference Guide](art.md)** or try a **[Tutorial](modeling_basics.md)**.
 
-        I went with a simple red gem, and made it a little smaller than the default diamond.
+        In this case the simple red gem is used, and made it a little smaller than the default diamond.
 
         ![Red Gem Model](../img/EditorManual/Abilities/redGem.png "Red Gem Model"){: .center loading="lazy" }
 
@@ -102,19 +99,19 @@ For this tutorial, we are going to make the player wave hello.
 
     4. Right click the Art folder, and hover over **"Create Network Context..."** to select **"New Client Context Containing This"** to ensure better performance for the game by wrapping the art in a Client Context.
 
-        Now that we've created a visible object that can be picked up, it needs to do something!
+        Now that we've created a visible object that can be picked up, it needs to do something.
 
 4. Before we set up the animation to work, let's make sure everything is together. So far in this tutorial, if you have been dragging things directly into the project Hierarchy, they should all be sitting at the (0,0,0) position of the game world.
 
     Make sure everything is together in the spot you expect, and that your art model and equipment trigger are in the same location.
 
-    You might even want to drag the whole thing upwards so that the trigger rests on top of the floor rather than halfway into the floor! When you want to move the whole thing, be sure to move the root folder: the `Equipment` object.
+    You might even want to drag the whole thing upwards so that the trigger rests on top of the floor rather than halfway into the floor. When you want to move the whole thing, be sure to move the root folder: the `Equipment` object.
 
     All together, it should look something like this:
 
     ![Everything together at 0,0,0](../img/EditorManual/Abilities/trigger000withGem.png "This equipment setup is fully above the ground now."){: .center loading="lazy" }
 
-5. Now to set up the animation! Navigate back to the **Core Content** tab and the **Gameplay Objects** section, and this time drag an **Ability Object** into your project **Hierarchy**.
+5. Now to set up the animation. Navigate back to the **Core Content** tab and the **Gameplay Objects** section, and this time drag an **Ability Object** into your project **Hierarchy**.
 
     1. Click on the `Ability` object and drag it onto the `Equipment` object to make it a child of the `Equipment` object.
 
@@ -142,12 +139,12 @@ For this tutorial, we are going to make the player wave hello.
 
     2. Do the same thing to the Facing Mode in the **Execute** section.
 
-**Now the ability is fully useable!** When you play your game, pick up the object, and then press ++shift++, you will be able to wave hello!
+**Now the ability is fully useable!** When you play your game, pick up the object, and then press ++shift++, you will be able to wave hello.
 
 !!! info "Good Object Placement"
-    If you haven't moved your `Equipment` object at all so far, your gem may be clipping into the ground! Feel free to move the whole `Equipment` object upwards to make it both easier to see and simpler to pick up.
+    If you haven't moved your `Equipment` object at all so far, your gem may be clipping into the ground. Feel free to move the whole `Equipment` object upwards to make it both easier to see and simpler to pick up.
 
-  If you'd like to change the amount of time between when you use (also known as **Cast**) an ability, this can be altered within the `Ability` object!
+  If you'd like to change the amount of time between when you use (also known as **Cast**) an ability, this can be altered within the `Ability` object.
 
   1. In the **Properties** window for the ability object, scroll down to the section called **Cooldown**.
 
@@ -159,7 +156,7 @@ For this tutorial, we are going to make the player wave hello.
 
   Of course, it would be nice to know when the ability has been activated, and how long it will be until you can use it again display on-screen.
 
-  For this we need UI!
+  For this we need UI.
 
 ---
 
@@ -167,7 +164,7 @@ For this tutorial, we are going to make the player wave hello.
 
 A crucial part of a video game is the feedback it gives--players need to know that they're using an ability.
 
-While you can make a User Interface _(often abbreviated to UI)_ element yourself, there is a pre-made template within **Core Content** that we can use to very quickly set up simple UI for our new ability!
+While you can make a User Interface _(often abbreviated to UI)_ element yourself, there is a pre-made template within **Core Content** that we can use to very quickly set up simple UI for our new ability.
 
 When the `Ability` is in the Cooldown phase, it will darken the ability button and show the seconds remaining until the `Ability` is usable again.
 
@@ -194,7 +191,7 @@ To get this to work correctly with the `Ability` we made above, there are only a
 
     Select the **Icon** object, and from within the **Properties** window, double-click the **Image** property to choose from all of Core's other built-in UI icons.
 
-    In my case, I chose the "Icon hand" image!
+    In this case, I chose the "Icon hand" image.
 
     ![Hierarchy](../img/EditorManual/Abilities/ComponentHierarchy.png "Hierarchy"){: .center loading="lazy" }
 
@@ -213,7 +210,7 @@ Now the UI element will update automatically once the ability is cast.
 
 Abilities themselves work in multiplayer games perfectly without any extra programming effort. If you made your own ability UI icon and did not use the Core Content template above, the UI will not update properly in multiplayer games. For the UI to update as the ability happens, the UI relating to the player's abilities must be placed in a Client Context folder.
 
-This has already been done for us in the Core Content template, so no action is needed!
+This has already been done for us in the Core Content template, so no action is needed.
 
 !!! info "Client Context"
     Generally speaking, all UI related to the player should be in a Client Context folder.

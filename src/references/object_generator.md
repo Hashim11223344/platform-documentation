@@ -30,7 +30,7 @@ Check **Use Non-Uniform Scale** if you would like to further fine tune the scale
 
 ### Randomize Yaw
 
-Yaw is an object's rotation along the Y-axis. Checking **Randomize Yaw** ensures all of your objects will be facing different directions. This is another box you should keep checked if you want your scene to feel more realistic!
+Yaw is an object's rotation along the Y-axis. Checking **Randomize Yaw** ensures all of your objects will be facing different directions. This is another box you should keep checked if you want your scene to feel more realistic.
 
 ![ArtIntro1](../img/EnvironIntro/image9.png "Art Screenshot1")
 ![ArtIntro2](../img/EnvironIntro/image42.png "Art Screenshot2")
@@ -41,7 +41,7 @@ Yaw is an object's rotation along the Y-axis. Checking **Randomize Yaw** ensures
 
 ### Randomize Color
 
-If you would like to randomize the color of your spawned objects check **Use Random Color**. Most objects in real life aren't the same color, however setting the correct min and max RGB values can be tricky; it can be hard to understand if you aren't already familiar with how RGB values are assigned. Unfortunately we won't be covering it in this tutorial!
+If you would like to randomize the color of your spawned objects check **Use Random Color**. Most objects in real life aren't the same color, however setting the correct min and max RGB values can be tricky; it can be hard to understand if you aren't already familiar with how RGB values are assigned. Unfortunately we won't be covering it in this tutorial.
 
 ![ArtIntro1](../img/EnvironIntro/image9.png "Art Screenshot1")
 ![ArtIntro2](../img/EnvironIntro/image44.png "Art Screenshot2")
@@ -81,7 +81,7 @@ Checking **Only Spawn On Terrain** ensures spawned objects will only spawn on th
 
 **Position Randomness** is a percentage that randomizes the placement of each object based on what **In-Between Distance** is set to. If Distance is set to `5` and **Randomness** is set to `0`, each object will spawn in exactly the center of a 5x5 square. If you set **Randomness** to `1`, each object will spawn up to 5 meters away (100% of **Distance**) from the center of it's square. If you set **Randomness** to `2`, each object will spawn up to 10 meters away (200% of **Distance**) from the center of it's square.
 
-TL;DR: The higher **Position Randomness** is set to, the more displaced objects spawned will be.
+In summary: The higher **Position Randomness** is set to, the more displaced objects spawned will be.
 
 ![ArtIntro1](../img/EnvironIntro/image9.png "Art Screenshot1")
 ![ArtIntro2](../img/EnvironIntro/image3.png "Art Screenshot2")

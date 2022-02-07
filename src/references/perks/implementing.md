@@ -90,7 +90,7 @@ Once you have enable perks in the testing menu, start a multiplayer preview. If 
 
 ## Adding a Perks Purchase Button
 
-Perks can only be purchased using a **UI Perk Purchase Button**, and use a standardized dialogue to confirm a purchase.
+Perks can only be purchased using a **UI Perk Purchase Button**, and use a standardized dialog to confirm a purchase.
 
 ### Add a Perk Purchase Button to a Project
 
@@ -112,7 +112,7 @@ Perks exist in several different states that allow you to control whether player
 ### Inactive Perks
 
 !!! warning
-    Perks must be published as **inactive** before they are activated!
+    Perks must be published as **inactive** before they are activated.
 
 When perks are created they start out as **inactive**. Perks need to be associated with a project before they are activated, and to do that they must be published in an inactive state.
 

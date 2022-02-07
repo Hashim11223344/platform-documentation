@@ -8,7 +8,7 @@ tags:
 
 # Portals
 
-The design of Core allows for fast travel between any Core game, allowing players to jump through the Metaverse! Portals allow players to connect interconnected games, as well as build hubs for their own game portfolios, or to build a social space that connects to the Core Game queues, like Active and Featured.
+The design of Core allows for fast travel between any Core game, allowing players to jump through the Metaverse. Portals allow players to connect interconnected games, as well as build hubs for their own game portfolios, or to build a social space that connects to the Core Game queues, like Active and Featured.
 
 ## Creating Portals to Other Games
 
@@ -23,7 +23,7 @@ The **Game Portal** template can be added to any game to build a portal to anoth
 
 ### Find a GameID
 
-Core Game ID's can be found in the URL for the Core Game page.
+Core Game ID's can be found in the URL of the Core Game page.
 
 1. Find the game's page on **CoreGames.com** through search and copy its URL.
    - To get the URL directly from the Core Client, open the game page, and copy the URL via the **Share** button.

@@ -76,7 +76,7 @@ We want to implement these functions for the **Idle** and **Capture** activities
 
 The **AIActivityHandler** is a **Core** class that contains the **AIActivity** instances added. It "handles" them by performing the following steps (on each update):
 
-1. It loops through every **AIActivity** and calls that activity’s **tick()** method.
+1. It loops through every **AIActivity** and calls that activity's **tick()** method.
 2. Once it has called the `tick` function of each activity, it looks at the `activity.priority` property and determines which activity is the highest.
 3. If a new **AIActivity** is determined highest priority, it will call `activity.stop()` on the previous, and `activity.start()` on the new one.
 4. Finally, for the one activity that has the highest priority, it will call `activity.tickHighestPriority()` every frame.
@@ -102,7 +102,7 @@ For convenience, an activity code snipping has been provided in the **Script Gen
 4. Click the **Copy To Clipboard** button.
 5. In your `AI_TicTacToe` script, paste the new snippet.
 
-In the context of TicTacToe, the only thing Idle needs to do is... wait your turn.
+In the context of TicTacToe, the only thing Idle needs to do is wait your turn.
 
 !!! note
     The code snippet contains a stubbed implementation for each of the four methods of the AI Activity class, as members of a `local IdleActivity = {}` Lua table.
@@ -214,7 +214,7 @@ if isPlayerTurn then
 end
 ```
 
-Finally, select and verify there is a valid board position to capture.
+Finally, select, and verify there is a valid board position to capture.
 
 ```lua
 -- If the AI has not chosen a board position, it is time to do that now
@@ -272,7 +272,7 @@ Now that everything is implemented, it is time to clean up the code.
 
 Since the purpose of the **Idle Activity** is only to keep the `priority` set to `100`, we can remove the `tickHighestPriority()`, `start()`, and `stop()` functions.
 
-For the **Capture Activity**, there was no implementation for the `start()` and `stop()` functions, we we can remove those too.
+For the **Capture Activity**, there was no implementation for the `start()` and `stop()` functions, we can remove those too.
 
 ## Final Code
 
@@ -365,5 +365,3 @@ local CaptureActivityInstance = aiActivityHandler:AddActivity("Capture", Capture
 3. A bright blue marker will appear on the board; this is your move, the `X`.
 4. After two seconds a bright yellow marker will appear on the board; this is the AI's move, the `O`.
 5. Repeat until either you or the AI has won or there are no move available board positions to take, resulting in a tie.
-
-Good luck!

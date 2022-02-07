@@ -56,7 +56,7 @@ Example using:
 
 In this example, a handle can be dragged left and right that will update the progress of a UI Progress object. Using GetAbsolutePosition will make the calculations simpler to work out where to move the handle because it will provide the screen position of the UI object.
 
-Another way that is a little more complicated is to work it out based on the anchor and pivot of the parent. This can be difficult to do. Using the Absolute Position methods for get and set makes it easier when it comes to dyanamic UI (for example, dragging and dropping UI objects).
+Another way that is a little more complicated is to work it out based on the anchor and pivot of the parent. This can be difficult to do. Using the Absolute Position methods for get and set makes it easier when it comes to dynamic UI (for example, dragging, and dropping UI objects).
 
 ```lua
 -- Client script
@@ -603,7 +603,7 @@ Example using:
 
 ### `ShowFlyUpText`
 
-In this example, RP points can be granted to a player by calling the function GiveRewardPoints(player, amount). Additionally, a fly-up text appears and stays on screen for a bit, displaying the amount of RP that was gained. The script is broken into 2 parts, where the first one goes into a server script and the second one into a client script.
+In this example, RP points can be granted to a player by calling the function GiveRewardPoints(player, amount). Additionally, a fly up text appears and stays on screen for a bit, displaying the amount of RP that was gained. The script is broken into 2 parts, where the first one goes into a server script and the second one into a client script.
 
 ```lua
 -- Server script:
